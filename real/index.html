@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <form class="hidden" id="login-form">
@@ -16,7 +16,26 @@
       />
       <input type="submit" value="Log in" />
     </form>
+    <h2 id="clock">00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
-    <script src="app.js"></script>
+    <form id="todo-form">
+      <input type="text" placeholder="Write a To Do and Press Enter button" />
+      <input type="submit" name="" id="" />
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="quote">
+      <span></span>
+      <span></span>
+    </div>
+    <div id="weather">
+      <span></span>
+      <span></span>
+    </div>
+    <script src="js/clock.js"></script>
+    <script src="js/greetings.js"></script>
+    <script src="js/quote.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/background.js"></script>
   </body>
 </html>
