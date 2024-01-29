@@ -1,3 +1,94 @@
+@font-face {
+  font-family: "LAB디지털";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+}
+
+#clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-radius: 10px; */
+  width: 250px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: "LAB디지털";
+  font-size: 60px;
+  font-style: italic;
+  /* color: rgba(196, 255, 107, 1); */
+
+  border: 3px double rgba(196, 255, 107, 1);
+  box-shadow: 0px 0px 5px 0px rgba(196, 255, 107, 0.98);
+  margin-bottom: 10px;
+  /* transform: translate(20vw, 15vh); */
+}
+
+#clock {
+  /* font-weight: bolder; */
+  background-image: linear-gradient(
+    to right,
+    rgba(196, 255, 107, 0.98),
+    rgba(243, 254, 226, 0.7),
+    rgba(196, 255, 107, 0.98)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#login-form {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 250px;
+  height: 100px;
+  background-color: black;
+  font-family: "LAB디지털";
+  font-size: 60px;
+  border: 1px double white;
+}
+
+#todo-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 250px;
+  height: 100px;
+  background-color: black;
+  font-family: "LAB디지털";
+  font-size: 60px;
+  border: 1px double white;
+}
+
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 250px;
+  height: 100px;
+  background-color: black;
+  font-family: "LAB디지털";
+  font-size: 20px;
+  border: 1px double white;
+}
 .hidden {
   display: none;
 }
