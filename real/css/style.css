@@ -16,9 +16,13 @@ body {
   width: 100vw;
   height: 100vh;
   backdrop-filter: blur(3px);
+  position: relative;
 }
 
 #clock {
+  position: absolute;
+  top: 10vh;
+  left: 20vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,9 +34,10 @@ body {
   font-size: 60px;
   font-style: italic;
   /* color: rgba(196, 255, 107, 1); */
-
-  border: 3px double rgba(196, 255, 107, 1);
-  box-shadow: 0px 0px 5px 0px rgba(196, 255, 107, 0.98);
+  border-radius: 10px;
+  border: 2px solid rgb(84, 167, 124);
+  box-shadow: 0px 0px 15px rgb(84, 167, 124),
+    inset 0px 0px 15px rgb(84, 167, 124);
   margin-bottom: 10px;
   /* transform: translate(20vw, 15vh); */
 }
@@ -41,13 +46,17 @@ body {
   /* font-weight: bolder; */
   background-image: linear-gradient(
     to right,
-    rgba(196, 255, 107, 0.98),
-    rgba(243, 254, 226, 0.7),
-    rgba(196, 255, 107, 0.98)
+    rgb(72, 213, 183),
+    /* rgba(215, 255, 246, 0.7), */ rgb(72, 213, 183)
   );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+#clock {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 3px #fff;
 }
 
 #login-form {
@@ -91,4 +100,13 @@ body {
 }
 .hidden {
   display: none;
+}
+#greeting {
+  position: absolute;
+  top: 25vh;
+  left: 20vw;
+  font-family: "LAB디지털";
+  font-size: 80px;
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
 }
