@@ -17,12 +17,17 @@ body {
   height: 100vh;
   backdrop-filter: blur(3px);
   position: relative;
+  background-color: black;
+}
+#clock:hover {
+  /* border: 2px solid rgba(0, 0, 0, 0); */
+  box-shadow: none;
 }
 
 #clock {
-  position: absolute;
+  /* position: absolute;
   top: 10vh;
-  left: 20vw;
+  left: 20vw; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,13 +36,14 @@ body {
   height: 100px;
   background-color: rgba(0, 0, 0, 0.5);
   font-family: "LAB디지털";
-  font-size: 60px;
+  font-size: 70px;
   font-style: italic;
   /* color: rgba(196, 255, 107, 1); */
   border-radius: 10px;
-  border: 2px solid rgb(84, 167, 124);
-  box-shadow: 0px 0px 15px rgb(84, 167, 124),
-    inset 0px 0px 15px rgb(84, 167, 124);
+  /* border: 2px solid rgb(84, 167, 124); */
+  /* box-shadow: 0px 0px 15px rgb(84, 167, 124),
+    inset 0px 0px 15px rgb(84, 167, 124); */
+  /* box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); */
   margin-bottom: 10px;
   /* transform: translate(20vw, 15vh); */
 }
@@ -72,41 +78,35 @@ body {
   border: 1px double white;
 }
 
-#todo-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  width: 250px;
-  height: 100px;
-  background-color: black;
-  font-family: "LAB디지털";
-  font-size: 60px;
-  border: 1px double white;
-}
-
-#todo-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  width: 250px;
-  height: 100px;
-  background-color: black;
-  font-family: "LAB디지털";
-  font-size: 20px;
-  border: 1px double white;
-}
 .hidden {
   display: none;
 }
 #greeting {
-  position: absolute;
+  /* position: absolute;
   top: 25vh;
-  left: 20vw;
-  font-family: "LAB디지털";
+  left: 20vw; */
+  /* font-family: "LAB디지털"; */
   font-size: 80px;
   color: #fff;
   text-shadow: 0 0 10px #fff;
+}
+
+#todo-box {
+  border-radius: 10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  width: 30vw;
+  background-color: silver;
+}
+
+#quote {
+  color: lawngreen;
+}
+
+#weather {
+  color: aquamarine;
 }

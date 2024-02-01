@@ -8,4 +8,4 @@ bgImage.src = `img/${chosenImage}`;
 
 document.querySelector(
   "body"
-).style.backgroundImage = `url(img/${chosenImage})`;
+).style.backgroundImage = `url(../img/${chosenImage})`;
