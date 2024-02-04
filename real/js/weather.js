@@ -10,9 +10,11 @@ function onGeoOk(position) {
     .then((data) => {
       //   console.log(data);
       const weather = document.querySelector("#weather span:first-child");
+      const temp = document.querySelector("#weather span:nth-child(2)");
       const city = document.querySelector("#weather span:last-child");
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].description}/${data.main.temp}`;
+      weather.innerText = `${data.weather[0].description}`;
+      temp.innerText = `${data.main.temp}℃`;
       console.dir(data.main);
     });
 }

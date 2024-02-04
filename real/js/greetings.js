@@ -3,7 +3,6 @@ const loginInput = document.querySelector("#login-form input");
 // const loginButton = loginForm.querySelector("button");
 const link = document.querySelector("a");
 const h1 = document.querySelector("#greeting");
-const upper = document.querySelector("#upper");
 
 const HIDDEN_MSG = "hidden";
 const USERNAME_KEY = "username";
@@ -11,7 +10,6 @@ const USERNAME_KEY = "username";
 function greeting() {
   const username = localStorage.getItem(USERNAME_KEY);
   h1.classList.remove(HIDDEN_MSG);
-  upper.classList.remove(HIDDEN_MSG);
   h1.innerText = "WELCOME, \n" + username.toUpperCase();
 }
 

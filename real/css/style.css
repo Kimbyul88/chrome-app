@@ -6,13 +6,11 @@ body {
   height: 100vh;
   background-image: url("../img/warrior.png");
   background-repeat: no-repeat;
-  background-size: 900px;
+  background-size: 800px;
   background-position: top right, 0px 0px;
   font-family: "Roboto", sans-serif;
 }
-.hidden {
-  display: none;
-}
+
 @font-face {
   font-family: "LAB디지털";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/LAB디지털.woff")
@@ -21,81 +19,265 @@ body {
   font-style: normal;
 }
 
+#clock-line {
+  display: flex;
+  justify-content: space-between;
+}
 .clocks {
+  justify-content: center;
   font-family: "LAB디지털";
   font-weight: 600;
-  font-size: 100px;
+  font-size: 120px;
+  width: 25vw;
+  transform: translate(10vw, 20px);
 }
-
+#line {
+  transform: translate(-70px, 30px);
+  width: 16vw;
+  height: 30vh;
+  border-right: 6px solid black;
+  border-top: 6px solid black;
+}
+#line2 {
+  background-color: red;
+  transform: translate(-7vw, 40px);
+  width: 0;
+  height: 37vh;
+  border-right: 6px solid black;
+}
 .clocks div {
   height: 100px;
+  letter-spacing: 15px;
+  padding: 0 0 15px 0;
 }
 
-.clocks div:nth-child(1),
-.clocks div:nth-child(3) {
+.clocks div:nth-child(1) {
   color: black;
-  /* text-shadow: 2px 2px 5px black; */
+  transform: translate(0vw);
+  border-bottom: 5px double black;
 }
 .clocks div:nth-child(2) {
   color: aqua;
-  /* text-shadow: 2px 2px 5px aqua; */
+  transform: translate(10vw);
+  border-bottom: 5px double aqua;
 }
 
-#greeting {
-  width: 500px;
-  height: 100px;
+.clocks div:nth-child(3) {
+  color: black;
+  transform: translate(20vw);
+  border-bottom: 5px double black;
+}
+
+.except-clock {
+  transform: translate(0, 35px);
   display: flex;
+  align-items: flex-start;
   justify-content: center;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  font-size: 50px;
-  font-weight: 100px;
+  justify-content: center;
+}
+#login-form {
+  width: 300px;
+  height: 100px;
+  padding: 0 80px;
+  font-size: 40px;
+  font-weight: 200;
+  font-style: italic;
   color: rgba(255, 255, 255, 0.8);
   text-align: end;
-  /* transform: translate(50vw, 0); */
+  transform: translate(0, 60px);
   background-image: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.7),
-    rgba(0, 0, 0, 0.3),
-    rgba(255, 255, 255, 0.5)
+    rgba(0, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 255, 255, 0.5)
   );
   border: 1.5px solid white;
   box-shadow: inset 0 0 0px white;
-  border-radius: 50px 5px 0px 5px;
+  border-radius: 40px 5px 0px 5px;
+  margin-left: 20px;
 }
-
-#todo-window {
-  width: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  font-weight: 100px;
-  color: rgba(255, 255, 255, 0.8);
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0.7),
-    rgba(0, 0, 0, 0.3),
-    rgba(255, 255, 255, 0.5)
-  );
-  border: 1.5px solid white;
-  box-shadow: inset 0 0 0px white;
-  border-radius: 50px 5px 0px 5px;
-}
-
-#form-text {
+#login-text {
+  width: 100%;
   background: none;
   border: none;
   border-bottom: 2px solid white;
   color: white;
   font-weight: 700;
+  font-size: 30px;
 }
-#form-text::placeholder {
-  color: white;
-  font-weight: 100;
+#login-text::placeholder {
+  color: rgb(247, 247, 0);
+  font-weight: 600;
 }
-#form-submit {
+#login-text:focus {
+  outline: none;
+}
+#login-submit {
+  transform: translate(0, -10px);
+  margin-left: 15px;
   background: none;
   border: 2px solid white;
   color: white;
   border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+#login-submit:hover {
+  border: none;
+}
+#greeting:hover {
+  opacity: 0.8;
+}
+#greeting {
+  width: 300px;
+  height: 100px;
+  padding: 0 80px;
+  font-size: 40px;
+  font-weight: 700px;
+  font-style: italic;
+  color: rgba(247, 247, 0, 1);
+  text-align: end;
+  transform: translate(0, 60px);
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 255, 255, 0.5)
+  );
+  border: 1.5px solid white;
+  box-shadow: inset 0 0 0px white;
+  border-radius: 40px 5px 0px 5px;
+  margin-left: 20px;
+}
+
+#todo-window {
+  background-color: aqua;
+  width: 400px;
+  height: 38vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 100px;
+  color: black;
+  border: 1.5px solid rgba(0, 0, 0, 1);
+  border-radius: 40px 5px 40px 5px;
+}
+#todo-form {
+  display: flex;
+  justify-content: center;
+}
+#form-text {
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  color: black;
+  font-weight: 700;
+}
+#form-text::placeholder {
+  color: rgb(247, 247, 0);
+  font-weight: 700;
+}
+#form-text:focus {
+  outline: none;
+  background: none;
+}
+#form-submit {
+  margin-left: 15px;
+  background: none;
+  border: 2px solid black;
+  color: black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#form-submit:hover {
+  border: 2px solid aqua;
+}
+#todo-box {
+  width: 80%;
+}
+#todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  list-style: square;
+  font-size: 15px;
+}
+#todo-delbtn {
+  background: none;
+  border: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 900;
+  font-size: 13px;
+  cursor: pointer;
+}
+#todo-delbtn:hover {
+  color: red;
+}
+
+#quote {
+  margin-bottom: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  width: 160px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  padding: 0 20px;
+}
+#quote:hover {
+  background-color: rgb(50, 50, 50);
+}
+#quote span:first-child {
+  font-style: italic;
+  display: block;
+}
+#quote span:last-child {
+  color: aqua;
+  margin-top: 20px;
+}
+#weather:hover {
+  background-color: rgb(245, 245, 245);
+}
+#weather {
+  background-color: white;
+  color: black;
+  border: 1.5px solid black;
+  border-radius: 20px;
+  width: 160px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 15px;
+  padding: 0 20px;
+}
+#weather span {
+  margin: 2px 0 2px 0;
+}
+#weather span:nth-child(2) {
+  font-weight: bold;
+}
+
+.quote-weather {
+  margin-right: 20px;
+  transform: translate(0, 1vh);
+}
+.hidden {
+  display: none;
 }
