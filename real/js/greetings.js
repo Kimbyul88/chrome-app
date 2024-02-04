@@ -12,7 +12,7 @@ function greeting() {
   const username = localStorage.getItem(USERNAME_KEY);
   h1.classList.remove(HIDDEN_MSG);
   upper.classList.remove(HIDDEN_MSG);
-  h1.innerText = "Hi, " + username + "!";
+  h1.innerText = "WELCOME, \n" + username.toUpperCase();
 }
 
 function handleSubmit(event) {
